@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load the dataset
-df_sierreleone=pd.read_csv('C:\\Users\\Abdilala\\Documents\\GitHub\\10_academy\\Data\\sierraleone-bumbuna.csv')
+df_sierreleone=pd.read_csv('C:\\Users\\Lalaa\\Documents\\GitHub\\10_academy\\Data\\sierraleone-bumbuna.csv')
 
 
 # Summary statistics
@@ -87,8 +87,8 @@ plt.show()
 #commulative GHI and DNI visualization 
 df_sierreleone['Timestamp']= pd.to_datetime(df_sierreleone['Timestamp'])
 df_sierreleone.set_index('Timestamp', inplace=True)
-df_sierreleone['comulative_GHI']=df_sierreleone['GHI'].cumsum()
-df_sierreleone['comulative_DNI']=df_sierreleone['DNI'].cumsum()
+df_sierreleone['Cumulative_GHI']=df_sierreleone['GHI'].cumsum()
+df_sierreleone['Cumulative_DNI']=df_sierreleone['DNI'].cumsum()
 plt.figure(figsize=(14, 8))
 plt.plot(df_sierreleone.index, df_sierreleone['Cumulative_GHI'], label='Cumulative GHI', color='orange')
 plt.plot(df_sierreleone.index, df_sierreleone['Cumulative_DNI'], label='Cumulative DNI', color='blue')

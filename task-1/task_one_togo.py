@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load the dataset
-df_togo=pd.read_csv('C:\Users\Lalaa\Documents\GitHub\10_academy\Data\togo-dapaong_qc.csv')
+df_togo=pd.read_csv('C:\\Users\\Lalaa\\Documents\\GitHub\\10_academy\\Data\\togo-dapaong_qc.csv')
 
 # Summary statistics
 
@@ -86,8 +86,8 @@ plt.show()
 #commulative GHI and DNI visualization 
 df_togo['Timestamp']= pd.to_datetime(df_togo['Timestamp'])
 df_togo.set_index('Timestamp', inplace=True)
-df_togo['comulative_GHI']=df_togo['GHI'].cumsum()
-df_togo['comulative_DNI']=df_togo['DNI'].cumsum()
+df_togo['Cumulative_GHI']=df_togo['GHI'].cumsum()
+df_togo['Cumulative_DNI']=df_togo['DNI'].cumsum()
 plt.figure(figsize=(14, 8))
 plt.plot(df_togo.index, df_togo['Cumulative_GHI'], label='Cumulative GHI', color='orange')
 plt.plot(df_togo.index, df_togo['Cumulative_DNI'], label='Cumulative DNI', color='blue')
