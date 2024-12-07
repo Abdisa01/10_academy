@@ -6,7 +6,7 @@ import seaborn as sns
 from .utils import fetch_data, process_data
 
 def main():
-    st.title("Solar Irradiance Data Dashboard")
+    st.title("Solar Radiance Data Dashboard")
 
     # File upload or static CSV file usage
     uploaded_file = st.file_uploader("Upload CSV", type=["csv"])
